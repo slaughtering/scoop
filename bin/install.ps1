@@ -28,7 +28,8 @@ if ([System.Enum]::GetNames([System.Net.SecurityProtocolType]) -notcontains 'Tls
 }
 
 # get core functions
-$core_url = 'https://raw.githubusercontent.com/lukesampson/scoop/master/lib/core.ps1'
+# use jsdelivr cdn to bypass gfw
+$core_url = 'https://cdn.jsdelivr.net/gh/lukesampson/scoop@master/lib/core.ps1'
 Write-Output 'Initializing...'
 Invoke-Expression (new-object net.webclient).downloadstring($core_url)
 
@@ -41,7 +42,7 @@ if (installed 'scoop') {
 $dir = ensure (versiondir 'scoop' 'current')
 
 # download scoop zip
-$zipurl = 'https://github.com/lukesampson/scoop/archive/master.zip'
+$zipurl = 'https://download.fastgit.org/lukesampson/scoop/archive/master.zip'
 $zipfile = "$dir\scoop.zip"
 Write-Output 'Downloading scoop...'
 dl $zipurl $zipfile
@@ -57,7 +58,7 @@ shim "$dir\bin\scoop.ps1" $false
 
 # download main bucket
 $dir = "$scoopdir\buckets\main"
-$zipurl = 'https://github.com/ScoopInstaller/Main/archive/master.zip'
+$zipurl = 'https://download.fastgit.org/ScoopInstaller/Main/archive/master.zip'
 $zipfile = "$dir\main-bucket.zip"
 Write-Output 'Downloading main bucket...'
 New-Item $dir -Type Directory -Force | Out-Null
