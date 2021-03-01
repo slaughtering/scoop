@@ -29,7 +29,7 @@ if ([System.Enum]::GetNames([System.Net.SecurityProtocolType]) -notcontains 'Tls
 
 # get core functions
 # use jsdelivr cdn to bypass gfw
-$core_url = 'https://cdn.jsdelivr.net/gh/lukesampson/scoop@master/lib/core.ps1'
+$core_url = 'https://cdn.jsdelivr.net/gh/slaughtering/scoop@master/lib/core.ps1'
 Write-Output 'Initializing...'
 Invoke-Expression (new-object net.webclient).downloadstring($core_url)
 
@@ -42,7 +42,7 @@ if (installed 'scoop') {
 $dir = ensure (versiondir 'scoop' 'current')
 
 # download scoop zip
-$zipurl = 'https://download.fastgit.org/lukesampson/scoop/archive/master.zip'
+$zipurl = 'https://download.fastgit.org/slaughtering/scoop/archive/master.zip'
 $zipfile = "$dir\scoop.zip"
 Write-Output 'Downloading scoop...'
 dl $zipurl $zipfile
