@@ -39,7 +39,7 @@ $independent = $opt.i -or $opt.independent
 # load config
 $configRepo = get_config SCOOP_REPO
 if (!$configRepo) {
-    $configRepo = "https://github.com/lukesampson/scoop"
+    $configRepo = "https://hub.fastgit.org/slaughtering/scoop"
     set_config SCOOP_REPO $configRepo | Out-Null
 }
 
