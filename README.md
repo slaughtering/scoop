@@ -3,32 +3,32 @@
     <h1 align="center">Scoop</h1>
 </p>
 <p align="center">
-<b><a href="https://github.com/lukesampson/scoop#what-does-scoop-do">Features</a></b>
+<b><a href="https://github.com/slaughtering/scoop#what-does-scoop-do">Features</a></b>
 |
-<b><a href="https://github.com/lukesampson/scoop#installation">Installation</a></b>
+<b><a href="https://github.com/slaughtering/scoop#installation">Installation</a></b>
 |
 <b><a href="https://github.com/lukesampson/scoop/wiki">Documentation</a></b>
 </p>
 
 - - -
 <p align="center" >
-    <a href="https://github.com/lukesampson/scoop">
-        <img src="https://img.shields.io/github/languages/code-size/lukesampson/scoop.svg" alt="Code Size" />
+    <a href="https://github.com/slaughtering/scoop">
+        <img src="https://img.shields.io/github/languages/code-size/slaughtering/scoop.svg" alt="Code Size" />
     </a>
-    <a href="https://github.com/lukesampson/scoop">
-        <img src="https://img.shields.io/github/repo-size/lukesampson/scoop.svg" alt="Repository size" />
+    <a href="https://github.com/slaughtering/scoop">
+        <img src="https://img.shields.io/github/repo-size/slaughtering/scoop.svg" alt="Repository size" />
     </a>
-    <a href="https://ci.appveyor.com/project/lukesampson/scoop">
+    <a href="https://ci.appveyor.com/project/slaughtering/scoop">
         <img src="https://ci.appveyor.com/api/projects/status/05foxatmrqo0l788?svg=true" alt="Build Status" />
     </a>
     <a href="https://discord.gg/s9yRQHt">
         <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
     </a>
-    <a href="https://gitter.im/lukesampson/scoop">
-        <img src="https://badges.gitter.im/lukesampson/scoop.png" alt="Gitter Chat" />
+    <a href="https://gitter.im/slaughtering/scoop">
+        <img src="https://badges.gitter.im/slaughtering/scoop.png" alt="Gitter Chat" />
     </a>
-    <a href="https://github.com/lukesampson/scoop/blob/master/LICENSE">
-        <img src="https://img.shields.io/github/license/lukesampson/scoop.svg" alt="License" />
+    <a href="https://github.com/slaughtering/scoop/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/slaughtering/scoop.svg" alt="License" />
     </a>
 </p>
 
@@ -67,10 +67,10 @@ If you've built software that you'd like others to use, Scoop is an alternative 
 Run the following command from your PowerShell to install scoop to its default location (`C:\Users\<user>\scoop`)
 
 ```powershell
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/slaughtering/scoop@master/bin/install.ps1')
 
 # or shorter
-iwr -useb get.scoop.sh | iex
+iwr -useb cdn.jsdelivr.net/gh/slaughtering/scoop@master/bin/install.ps1 | iex
 ```
 
 Once installed, run `scoop help` for instructions.
@@ -137,7 +137,7 @@ If you find Scoop useful and would like to support ongoing development and maint
 The following buckets are known to scoop:
 
 - [main](https://github.com/ScoopInstaller/Main) - Default bucket for the most common (mostly CLI) apps
-- [extras](https://github.com/lukesampson/scoop-extras) - Apps that don't fit the main bucket's [criteria](https://github.com/lukesampson/scoop/wiki/Criteria-for-including-apps-in-the-main-bucket)
+- [extras](https://github.com/lukesampson/scoop-extras) - Apps that don't fit the main bucket's [criteria](https://github.com/slaughtering/scoop/wiki/Criteria-for-including-apps-in-the-main-bucket)
 - [games](https://github.com/Calinou/scoop-games) - Open source/freeware games and game-related tools
 - [nerd-fonts](https://github.com/matthewjberger/scoop-nerd-fonts) -  Nerd Fonts
 - [nirsoft](https://github.com/kodybrown/scoop-nirsoft) - A subset of the [250](https://github.com/rasa/scoop-directory/blob/master/by-score.md#MCOfficer_scoop-nirsoft) [Nirsoft](https://nirsoft.net) apps
