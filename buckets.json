@@ -1,13 +1,13 @@
 {
-    "main": "https://github.com/ScoopInstaller/Main",
-    "extras": "https://github.com/lukesampson/scoop-extras",
-    "versions": "https://github.com/ScoopInstaller/Versions",
-    "nightlies": "https://github.com/ScoopInstaller/Nightlies",
-    "nirsoft": "https://github.com/kodybrown/scoop-nirsoft",
-    "php": "https://github.com/ScoopInstaller/PHP",
-    "nerd-fonts": "https://github.com/matthewjberger/scoop-nerd-fonts",
-    "nonportable": "https://github.com/TheRandomLabs/scoop-nonportable",
-    "java": "https://github.com/ScoopInstaller/Java",
-    "games": "https://github.com/Calinou/scoop-games",
-    "jetbrains": "https://github.com/Ash258/Scoop-JetBrains"
+    "main": "https://hub.fastgit.org/ScoopInstaller/Main",
+    "extras": "https://hub.fastgit.org/lukesampson/scoop-extras",
+    "versions": "https://hub.fastgit.org/ScoopInstaller/Versions",
+    "nightlies": "https://hub.fastgit.org/ScoopInstaller/Nightlies",
+    "nirsoft": "https://hub.fastgit.org/kodybrown/scoop-nirsoft",
+    "php": "https://hub.fastgit.org/ScoopInstaller/PHP",
+    "nerd-fonts": "https://hub.fastgit.org/matthewjberger/scoop-nerd-fonts",
+    "nonportable": "https://hub.fastgit.org/TheRandomLabs/scoop-nonportable",
+    "java": "https://hub.fastgit.org/ScoopInstaller/Java",
+    "games": "https://hub.fastgit.org/Calinou/scoop-games",
+    "jetbrains": "https://hub.fastgit.org/Ash258/Scoop-JetBrains"
 }
