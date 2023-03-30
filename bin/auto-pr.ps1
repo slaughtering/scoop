@@ -47,10 +47,7 @@ param(
     [String] $Upstream,
     [String] $OriginBranch = 'master',
     [String] $App = '*',
-<<<<<<< HEAD
-=======
     [String] $CommitMessageFormat = '<app>: Update to version <version>',
->>>>>>> upstream/master
     [ValidateScript( {
         if (!(Test-Path $_ -Type Container)) {
             throw "$_ is not a directory!"
@@ -73,11 +70,7 @@ param(
 if ($App -ne '*' -and (Test-Path $App -PathType Leaf)) {
     $Dir = Split-Path $App
 } elseif ($Dir) {
-<<<<<<< HEAD
-    $Dir = Resolve-Path $Dir
-=======
     $Dir = Convert-Path $Dir
->>>>>>> upstream/master
 } else {
     throw "'-Dir' parameter required if '-App' is not a filepath!"
 }

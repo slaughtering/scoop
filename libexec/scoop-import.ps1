@@ -13,11 +13,7 @@ param(
 
 $import = $null
 $bucket_names = @()
-<<<<<<< HEAD
-$def_arch = default_architecture
-=======
 $def_arch = Get-DefaultArchitecture
->>>>>>> upstream/master
 
 if (Test-Path $scoopfile) {
     $import = parse_json $scoopfile
@@ -44,19 +40,12 @@ foreach ($item in $import.apps) {
     } else {
         ''
     }
-<<<<<<< HEAD
-    $arch = if ('64bit' -in $info -and '32bit' -eq $def_arch) {
-        ' --arch 64bit'
-    } elseif ('32bit' -in $info -and '64bit' -eq $def_arch) {
-        ' --arch 32bit'
-=======
     $arch = if ('64bit' -in $info -and '64bit' -ne $def_arch) {
         ' --arch 64bit'
     } elseif ('32bit' -in $info -and '32bit' -ne $def_arch) {
         ' --arch 32bit'
     } elseif ('arm64' -in $info -and 'arm64' -ne $def_arch) {
         ' --arch arm64'
->>>>>>> upstream/master
     } else {
         ''
     }

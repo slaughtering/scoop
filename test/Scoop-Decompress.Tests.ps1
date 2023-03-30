@@ -25,17 +25,10 @@ Describe 'Decompression function' -Tag 'Scoop', 'Windows', 'Decompress' {
         }
         It 'Test cases should exist and hash should match' {
             $testcases | Should -Exist
-<<<<<<< HEAD
-            compute_hash $testcases 'sha256' | Should -Be '791bfce192917a2ff225dcdd87d23ae5f720b20178d85e68e4b1b56139cf8e6a'
-            if (!$isUnix) {
-                Microsoft.PowerShell.Archive\Expand-Archive $testcases $working_dir
-            }
-=======
             (Get-FileHash -Path $testcases -Algorithm SHA256).Hash.ToLower() | Should -Be '791bfce192917a2ff225dcdd87d23ae5f720b20178d85e68e4b1b56139cf8e6a'
         }
         It 'Test cases should be extracted correctly' {
             { Microsoft.PowerShell.Archive\Expand-Archive -Path $testcases -DestinationPath $working_dir } | Should -Not -Throw
->>>>>>> upstream/master
         }
     }
 
@@ -94,22 +87,14 @@ Describe 'Decompression function' -Tag 'Scoop', 'Windows', 'Decompress' {
             (Get-ChildItem $to).Count | Should -Be 1
         }
 
-<<<<<<< HEAD
-        It 'extract splited RAR archives (.part01.rar, .part02.rar, ...)' -Skip:$isUnix {
-=======
         It 'extract splited RAR archives (.part01.rar, .part02.rar, ...)' {
->>>>>>> upstream/master
             $to = test_extract 'Expand-7zipArchive' $test6_1
             $to | Should -Exist
             "$to\dummy" | Should -Exist
             (Get-ChildItem $to).Count | Should -Be 1
         }
 
-<<<<<<< HEAD
-        It 'works with "-Removal" switch ($removal param)' -Skip:$isUnix {
-=======
         It 'works with "-Removal" switch ($removal param)' {
->>>>>>> upstream/master
             $test1 | Should -Exist
             test_extract 'Expand-7zipArchive' $test1 $true
             $test1 | Should -Not -Exist

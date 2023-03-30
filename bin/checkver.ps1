@@ -77,17 +77,10 @@ param(
 
 if ($App -ne '*' -and (Test-Path $App -PathType Leaf)) {
     $Dir = Split-Path $App
-<<<<<<< HEAD
-    $files = Get-ChildItem $Dir (Split-Path $App -Leaf)
-} elseif ($Dir) {
-    $Dir = Resolve-Path $Dir
-    $files = Get-ChildItem $Dir "$App.json"
-=======
     $files = Get-ChildItem $Dir -Filter (Split-Path $App -Leaf)
 } elseif ($Dir) {
     $Dir = Convert-Path $Dir
     $files = Get-ChildItem $Dir -Filter "$App.json" -Recurse
->>>>>>> upstream/master
 } else {
     throw "'-Dir' parameter required if '-App' is not a filepath!"
 }
@@ -103,12 +96,8 @@ if ($App -eq '*' -and $Version -ne '') {
 $Queue = @()
 $json = ''
 $files | ForEach-Object {
-<<<<<<< HEAD
-    $json = parse_json "$Dir\$($_.Name)"
-=======
     $file = $_.FullName
     $json = parse_json $file
->>>>>>> upstream/master
     if ($json.checkver) {
         $Queue += , @($_.BaseName, $json, $file)
     }
@@ -289,18 +278,11 @@ while ($in_progress -gt 0) {
             continue
         }
 
-<<<<<<< HEAD
-        if ($json.checkver.script) {
-            $page = Invoke-Command ([scriptblock]::Create($json.checkver.script -join "`r`n"))
-        } else {
-            $page = (Get-Encoding($wc)).GetString($ev.SourceEventArgs.Result)
-=======
         if ($url) {
             $page = (Get-Encoding($wc)).GetString($ev.SourceEventArgs.Result)
         }
         if ($script) {
             $page = Invoke-Command ([scriptblock]::Create($script -join "`r`n"))
->>>>>>> upstream/master
         }
 
         if ($jsonpath) {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## [v0.3.1](https://github.com/ScoopInstaller/Scoop/compare/v0.3.0...v0.3.1) - 2022-11-15
 
 ### Features
@@ -99,7 +97,6 @@
 - **checkver:** Load page content before running 'script' ([#5080](https://github.com/ScoopInstaller/Scoop/issues/5080))
 - **json:** Update Newtonsoft.Json.Schema to 3.0.15-beta2 ([#5053](https://github.com/ScoopInstaller/Scoop/issues/5053))
 
->>>>>>> upstream/master
 ## [v0.2.3](https://github.com/ScoopInstaller/Scoop/compare/v0.2.2...v0.2.3) - 2022-07-07
 
 ### Features

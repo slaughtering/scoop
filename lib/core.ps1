@@ -1125,11 +1125,6 @@ function Get-GitHubToken {
 
 function handle_special_urls($url)
 {
-    if ($url -like 'https://github.com*') {
-        $url = $url -replace 'https://github.com','https://download.fastgit.org'
-        return $url
-    }
-
     # FossHub.com
     if ($url -match "^(?:.*fosshub.com\/)(?<name>.*)(?:\/|\?dwl=)(?<filename>.*)$") {
         $Body = @{

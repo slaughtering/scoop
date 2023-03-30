@@ -3,9 +3,9 @@
     <h1 align="center">Scoop</h1>
 </p>
 <p align="center">
-<b><a href="https://github.com/slaughtering/scoop#what-does-scoop-do">Features</a></b>
+<b><a href="https://github.com/ScoopInstaller/Scoop#what-does-scoop-do">Features</a></b>
 |
-<b><a href="https://github.com/slaughtering/scoop#installation">Installation</a></b>
+<b><a href="https://github.com/ScoopInstaller/Scoop#installation">Installation</a></b>
 |
 <b><a href="https://github.com/ScoopInstaller/Scoop/wiki">Documentation</a></b>
 </p>
@@ -61,7 +61,7 @@ If you've built software that you'd like others to use, Scoop is an alternative 
 Run the following command from a **non-admin** PowerShell to install scoop to its default location `C:\Users\<YOUR USERNAME>\scoop`.
 
 ```powershell
-iwr -useb https://cdn.jsdelivr.net/gh/slaughtering/scoop_installer@master/install.ps1 | iex
+iwr -useb get.scoop.sh | iex
 ```
 
 Advanced installation instruction and full documentation of the installer are available in [ScoopInstaller/Install](https://github.com/ScoopInstaller/Install). Please create new issues there if you have questions about the installation.

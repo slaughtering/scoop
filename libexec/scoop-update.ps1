@@ -37,7 +37,7 @@ $all = $opt.a -or $opt.all
 # load config
 $configRepo = get_config SCOOP_REPO
 if (!$configRepo) {
-    $configRepo = "https://github.com/slaughtering/scoop"
+    $configRepo = "https://github.com/ScoopInstaller/Scoop"
     set_config SCOOP_REPO $configRepo | Out-Null
 }
 
