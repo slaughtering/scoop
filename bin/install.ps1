@@ -1,4 +1,5 @@
 #Requires -Version 5
+<<<<<<< HEAD
 
 # remote install:
 #   Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
@@ -77,3 +78,6 @@ success 'Scoop was installed successfully!'
 Write-Output "Type 'scoop help' for instructions."
 
 $erroractionpreference = $old_erroractionpreference # Reset $erroractionpreference to original value
+=======
+Invoke-RestMethod https://get.scoop.sh | Invoke-Expression
+>>>>>>> upstream/master

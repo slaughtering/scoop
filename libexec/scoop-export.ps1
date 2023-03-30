@@ -10,7 +10,11 @@ $export = @{}
 if ($args[0] -eq '-c' -or $args[0] -eq '--config') {
     $export.config = $scoopConfig
     # Remove machine-specific properties
+<<<<<<< HEAD
     foreach ($prop in 'lastUpdate', 'rootPath', 'globalPath', 'cachePath', 'alias') {
+=======
+    foreach ($prop in 'last_update', 'root_path', 'global_path', 'cache_path', 'alias') {
+>>>>>>> upstream/master
         $export.config.PSObject.Properties.Remove($prop)
     }
 }

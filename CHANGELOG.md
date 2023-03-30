@@ -1,3 +1,105 @@
+<<<<<<< HEAD
+=======
+## [v0.3.1](https://github.com/ScoopInstaller/Scoop/compare/v0.3.0...v0.3.1) - 2022-11-15
+
+### Features
+
+- **config:** Allow Scoop to check if apps versioned as 'nightly' are outdated ([#5166](https://github.com/ScoopInstaller/Scoop/issues/5166))
+- **checkup:** Add Windows Developer Mode check ([#5233](https://github.com/ScoopInstaller/Scoop/issues/5233))
+- **bucket:** Add 'sysinternals' bucket to known ([#5237](https://github.com/ScoopInstaller/Scoop/issues/5237))
+
+### Bug Fixes
+
+- **decompress:** Use PS's default 'Expand-Archive()' ([#5185](https://github.com/ScoopInstaller/Scoop/issues/5185))
+- **hash:** Fix SourceForge's hash extraction ([#5189](https://github.com/ScoopInstaller/Scoop/issues/5189))
+- **decompress:** Trim ending '/' ([#5195](https://github.com/ScoopInstaller/Scoop/issues/5195))
+- **shim:** Exit if shim creating failed 'cause no git ([#5225](https://github.com/ScoopInstaller/Scoop/issues/5225))
+- **scoop-import:** Add correct architecture argument ([#5210](https://github.com/ScoopInstaller/Scoop/issues/5210))
+- **scoop-config:** Output `[DateTime]` as `[String]` ([#5232](https://github.com/ScoopInstaller/Scoop/issues/5232))
+
+### Code Refactoring
+
+- **hash:** Use `Get-FileHash()` directly ([#5177](https://github.com/ScoopInstaller/Scoop/issues/5177))
+- **installer:** Drop the old installer ([#5186](https://github.com/ScoopInstaller/Scoop/issues/5186))
+- **unix:** Remove `unix.ps1` ([#5235](https://github.com/ScoopInstaller/Scoop/issues/5235))
+
+### Builds
+
+- **auto-pr:** Add `CommitMessageFormat` option ([#5171](https://github.com/ScoopInstaller/Scoop/issues/5171))
+- **checkver:** Support XML default namespace ([#5191](https://github.com/ScoopInstaller/Scoop/issues/5191))
+- **pssa:** Remove unused 'ExcludeRules' ([#5201](https://github.com/ScoopInstaller/Scoop/issues/5201))
+- **schema:** Add 'installer' and 'shortcuts' to 'autoupdate' ([#5220](https://github.com/ScoopInstaller/Scoop/issues/5220))
+- **checkhashes:** Use correct version number if `UseCache` ([#5240](https://github.com/ScoopInstaller/Scoop/issues/5240))
+
+### Continuous Integration
+
+- **module:** Update modules version ([#5209](https://github.com/ScoopInstaller/Scoop/issues/5209))
+
+### Tests
+
+- **unix:** Fix tests in Linux and macOS ([#5179](https://github.com/ScoopInstaller/Scoop/issues/5179))
+- **pester:** Update to Pester 5 ([#5222](https://github.com/ScoopInstaller/Scoop/issues/5222))
+- **bucket:** Use BuildHelpers' EnvVars ([#5226](https://github.com/ScoopInstaller/Scoop/issues/5226))
+
+### Documentation
+
+- **scoop-cat:** Fix help message([#5224](https://github.com/ScoopInstaller/Scoop/issues/5224))
+
+## [v0.3.0](https://github.com/ScoopInstaller/Scoop/compare/v0.2.4...v0.3.0) - 2022-10-10
+
+### Features
+
+- **install:** Add support for ARM64 architecture ([#5154](https://github.com/ScoopInstaller/Scoop/issues/5154))
+- **install:** Show the running process ([#5102](https://github.com/ScoopInstaller/Scoop/issues/5102))
+- **getopt:** Support option terminator (`--`) ([#5121](https://github.com/ScoopInstaller/Scoop/issues/5121))
+- **subdir:** Allow subdir in 'bucket' ([#5119](https://github.com/ScoopInstaller/Scoop/issues/5119))
+- **scoop-config:** Allow 'hold_update_until' be set manually ([#5100](https://github.com/ScoopInstaller/Scoop/issues/5100))
+- **scoop-(un)hold:** Support `scoop (un)hold scoop` ([#5089](https://github.com/ScoopInstaller/Scoop/issues/5089))
+- **scoop-update:** Stash uncommitted changes before update ([#5091](https://github.com/ScoopInstaller/Scoop/issues/5091))
+
+### Bug Fixes
+
+- **config:** Change config option to snake_case in file and SCREAMING_CASE in code ([#5116](https://github.com/ScoopInstaller/Scoop/issues/5116))
+- **jsonpath:** Prevent converting date string to DateTime in JSONPath ([#5130](https://github.com/ScoopInstaller/Scoop/issues/5130))
+- **psmodule:** Remove folder recursively when unlinking previous module path ([#5127](https://github.com/ScoopInstaller/Scoop/issues/5127))
+- **scoop-update:** Add `uninstall_psmodule` to update process ([#5136](https://github.com/ScoopInstaller/Scoop/issues/5136))
+
+### Code Refactoring
+
+- **download:** Rename `dl()` to `Invoke-Download()` ([#5143](https://github.com/ScoopInstaller/Scoop/issues/5143))
+- **path:** Use 'Convert-Path()' instead of 'Resolve-Path()' ([#5109](https://github.com/ScoopInstaller/Scoop/issues/5109))
+- **scoop-shim:** Use `getopt` to parse arguments ([#5125](https://github.com/ScoopInstaller/Scoop/issues/5125))
+
+### Builds
+
+- **checkver:** Implement SourceForge checkver functionality ([#5113](https://github.com/ScoopInstaller/Scoop/issues/5113), [#5163](https://github.com/ScoopInstaller/Scoop/issues/5163))
+- **checkurls:** Allow checking URLs from private_hosts ([#5152](https://github.com/ScoopInstaller/Scoop/issues/5152))
+- **schema:** Set manifest schema to be stricter ([#5093](https://github.com/ScoopInstaller/Scoop/issues/5093))
+- **vscode:** Tweak VSCode setting ([#5149](https://github.com/ScoopInstaller/Scoop/issues/5149))
+
+## [v0.2.4](https://github.com/ScoopInstaller/Scoop/compare/v0.2.3...v0.2.4) - 2022-08-08
+
+### Features
+
+- **core:** Create no window by default in `Invoke-ExternalCommand` ([#5066](https://github.com/ScoopInstaller/Scoop/issues/5066))
+- **core:** Improve argument concatenation in `Invoke-ExternalCommand` ([#5065](https://github.com/ScoopInstaller/Scoop/issues/5065))
+- **install:** Show bucket name while installing an app ([#5075](https://github.com/ScoopInstaller/Scoop/issues/5075))
+- **scoop-status:** Add flag to disable remote checking ([#5073](https://github.com/ScoopInstaller/Scoop/issues/5073))
+- **scoop-update:** Add support for `pre_uninstall` and `post_uninstall` ([#5085](https://github.com/ScoopInstaller/Scoop/issues/5085))
+
+### Bug Fixes
+
+- **core:** Avoid deadlock in `Invoke-ExternalCommand` ([#5064](https://github.com/ScoopInstaller/Scoop/issues/5064))
+- **core:** Use 'System.Nullable<bool>' for param 'global' ([#5088](https://github.com/ScoopInstaller/Scoop/issues/5088))
+- **install:** Move from cache when `--no-cache` is specified ([#5039](https://github.com/ScoopInstaller/Scoop/issues/5039))
+- **scoop-status:** Correct formatting of `Info` output ([#5047](https://github.com/ScoopInstaller/Scoop/issues/5047))
+
+### Builds
+
+- **checkver:** Load page content before running 'script' ([#5080](https://github.com/ScoopInstaller/Scoop/issues/5080))
+- **json:** Update Newtonsoft.Json.Schema to 3.0.15-beta2 ([#5053](https://github.com/ScoopInstaller/Scoop/issues/5053))
+
+>>>>>>> upstream/master
 ## [v0.2.3](https://github.com/ScoopInstaller/Scoop/compare/v0.2.2...v0.2.3) - 2022-07-07
 
 ### Features
