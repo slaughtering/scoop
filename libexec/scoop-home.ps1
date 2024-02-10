@@ -8,7 +8,7 @@ if ($app) {
     $null, $manifest, $bucket, $null = Get-Manifest $app
     if ($manifest) {
         if ($manifest.homepage) {
-            Start-Process $($manifest.homepage -replace 'github.com', 'hub.fgit.cf')
+            Start-Process $($manifest.homepage -replace 'github.com', 'kkgithub.com')
         } else {
             abort "Could not find homepage in manifest for '$app'."
         }
