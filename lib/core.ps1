@@ -1125,7 +1125,7 @@ function Get-GitHubToken {
 
 function handle_special_urls($url)
 {
-    if ($url -like 'https://github.com*') {
+    if ($url -like 'https://*github*') {
         $url = 'https://ghproxy.org/' + $url
         return $url
     }
