@@ -314,7 +314,7 @@ function Get-HelperPath {
                 }
             }
             'Lessmsi' { $HelperPath = Get-AppFilePath 'lessmsi' 'lessmsi.exe' }
-            'Innounp' { $HelperPath = Get-AppFilePath 'innounp' 'innounp.exe' }
+            'Innounp' { $HelperPath = Get-AppFilePath 'innounp-unicode' 'innounp.exe' }
             'Dark' {
                 $HelperPath = Get-AppFilePath 'dark' 'dark.exe'
                 if ([String]::IsNullOrEmpty($HelperPath)) {

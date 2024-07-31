@@ -113,7 +113,7 @@ function Get-InstallationHelper {
             $helper += 'lessmsi'
         }
         if ($Manifest.innosetup -or ($script -like '*Expand-InnoArchive *')) {
-            $helper += 'innounp'
+            # $helper += 'innounp'
         }
         if ($script -like '*Expand-DarkArchive *') {
             $helper += 'dark'
