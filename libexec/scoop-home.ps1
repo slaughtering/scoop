@@ -8,6 +8,7 @@ if ($app) {
     $null, $manifest, $bucket, $null = Get-Manifest $app
     if ($manifest) {
         if ($manifest.homepage) {
+            echo $manifest.homepage
             Start-Process $manifest.homepage
         } else {
             abort "Could not find homepage in manifest for '$app'."
