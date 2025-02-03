@@ -10,6 +10,7 @@ param($app)
 . "$PSScriptRoot\..\lib\versions.ps1" # 'Select-CurrentVersion'
 . "$PSScriptRoot\..\lib\manifest.ps1" # 'Get-Manifest'
 . "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent'
+. "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent for url_manifest in Get-Manifest'
 
 if (!$app) { error '<app> missing'; my_usage; exit 1 }
 

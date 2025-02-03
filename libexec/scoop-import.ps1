@@ -10,6 +10,7 @@ param(
 )
 
 . "$PSScriptRoot\..\lib\manifest.ps1"
+. "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent for url_manifest'
 
 $import = $null
 $bucket_names = @()
