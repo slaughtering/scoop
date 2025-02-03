@@ -592,7 +592,17 @@ function github_ratelimit_reached {
 
 ### URL handling
 
+$ghp_api = Invoke-RestMethod https://api.akams.cn/github
+$gh_proxies = $ghp_api.data | Sort-Object -Property speed -Descending
+$ghproxy = $gh_proxies[0]
+
 function handle_special_urls($url) {
+    # ghproxy
+    if ($url -like 'https://*github*') {
+	    $url = $ghproxy + '/' + $url
+	    return $url
+	}
+
     # FossHub.com
     if ($url -match '^(?:.*fosshub.com\/)(?<name>.*)(?:\/|\?dwl=)(?<filename>.*)$') {
         $Body = @{
