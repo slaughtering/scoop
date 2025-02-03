@@ -6,6 +6,7 @@
 . "$PSScriptRoot\..\lib\versions.ps1" # 'Select-CurrentVersion'
 . "$PSScriptRoot\..\lib\manifest.ps1" # 'Get-Manifest' (indirectly)
 . "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent'
+. "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent for url_manifest in Get-Manifest'
 
 $opt, $apps, $err = getopt $args 'a:' 'arch='
 $app = $apps[0]
