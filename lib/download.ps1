@@ -678,10 +678,7 @@ function get_magic_bytes_pretty($file, $glue = ' ') {
 }
 
 Function Get-RemoteFileSize ($Uri) {
-    if ($Uri -like 'https://*github*') {
-        # $Uri = 'https://ghfast.top/' + $Uri
-        $Uri = $ghproxy + '/' + $Uri
-    }
+    $Uri = handle_special_urls $Uri
     $response = Invoke-WebRequest -Uri $Uri -Method HEAD -UseBasicParsing
     if (!$response.Headers.StatusCode) {
         $response.Headers.'Content-Length' | ForEach-Object { [int]$_ }
