@@ -594,11 +594,12 @@ function github_ratelimit_reached {
 
 $ghp_api = Invoke-RestMethod https://api.akams.cn/github
 $gh_proxies = $ghp_api.data | Sort-Object -Property speed -Descending
-$ghproxy = $gh_proxies[0]
+$ghproxy = $gh_proxies[0].url
 
 function handle_special_urls($url) {
     # ghproxy
     if ($url -like 'https://*github*') {
+        # $Uri = 'https://ghfast.top/' + $Uri
 	    $url = $ghproxy + '/' + $url
 	    return $url
 	}
@@ -678,7 +679,8 @@ function get_magic_bytes_pretty($file, $glue = ' ') {
 
 Function Get-RemoteFileSize ($Uri) {
     if ($Uri -like 'https://*github*') {
-        $Uri = 'https://ghproxy.net/' + $url
+        # $Uri = 'https://ghfast.top/' + $Uri
+        $Uri = $ghproxy + '/' + $Uri
     }
     $response = Invoke-WebRequest -Uri $Uri -Method HEAD -UseBasicParsing
     if (!$response.Headers.StatusCode) {
