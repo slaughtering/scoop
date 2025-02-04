@@ -13,10 +13,7 @@ function parse_json($path) {
 
 function url_manifest($url) {
     $str = $null
-    if ($url -like 'https://*github*') {
-        # $Uri = 'https://ghfast.top/' + $Uri
-        $url = $ghproxy + '/' + $url
-    }
+    $url = handle_special_urls $url
     try {
         $wc = New-Object Net.Webclient
         $wc.Headers.Add('User-Agent', (Get-UserAgent))
