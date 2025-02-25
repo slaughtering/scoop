@@ -1176,7 +1176,7 @@ function is_scoop_outdated() {
     $now = [System.DateTime]::Now
     try {
         $expireHour = (New-TimeSpan (get_config LAST_UPDATE) $now).TotalHours
-        return ($expireHour -ge 3)
+        return ($expireHour -ge 32)
     } catch {
         # If not System.DateTime
         set_config LAST_UPDATE ($now.ToString('o')) | Out-Null
