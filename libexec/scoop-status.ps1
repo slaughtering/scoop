@@ -5,7 +5,6 @@
 #                       and disables remote fetching/checking for Scoop and buckets
 
 . "$PSScriptRoot\..\lib\manifest.ps1" # 'manifest' 'parse_json' "install_info"
-. "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent for manifest->url_manifest in app_status'
 . "$PSScriptRoot\..\lib\versions.ps1" # 'Select-CurrentVersion'
 . "$PSScriptRoot\..\lib\download.ps1" # 'Get-UserAgent'
 
