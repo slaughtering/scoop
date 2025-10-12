@@ -594,13 +594,13 @@ function github_ratelimit_reached {
 
 # $ghp_api = Invoke-RestMethod https://api.akams.cn/github
 # $gh_proxies = $ghp_api.data | Sort-Object -Property speed -Descending
-# $ghproxy = $gh_proxies[0].url
+# $ghproxy = $gh_proxies[0].url + '/'
 
 function handle_special_urls($url) {
     # ghproxy
     if ($url -like 'https://*github*') {
         # $Uri = 'https://ghfast.top/' + $Uri
-	    $url = $ghproxy + '/' + $url
+	    $url = $ghproxy + $url
 	    return $url
 	}
 
