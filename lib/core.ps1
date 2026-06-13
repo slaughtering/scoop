@@ -1064,10 +1064,10 @@ function shim($path, $global, $name, $arg) {
 function get_shim_path() {
     $shim_version = get_config SHIM 'kiennq'
     $shim_path = switch ($shim_version) {
-        'scoopcs' { "$(versiondir 'scoop' 'current')\supporting\shims\scoopcs\shim.exe" }
+        'cs' { "$(versiondir 'scoop' 'current')\supporting\shims\cs\shim.exe" }
         '71' { "$(versiondir 'scoop' 'current')\supporting\shims\71\shim.exe" }
         'kiennq' { "$(versiondir 'scoop' 'current')\supporting\shims\kiennq\shim.exe" }
-        'default' { "$(versiondir 'scoop' 'current')\supporting\shims\scoopcs\shim.exe" }
+        'default' { "$(versiondir 'scoop' 'current')\supporting\shims\cs\shim.exe" }
         default { warn "Unknown shim version: '$shim_version'" }
     }
     return $shim_path
