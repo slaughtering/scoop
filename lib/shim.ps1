@@ -48,6 +48,17 @@ function Set-PESubsystem($filePath, $targetSubsystem) {
     return $true
 }
 
+function get_app_name($path) {
+    if ((Test-Path (appsdir $false)) -and ($path -match "$([Regex]::Escape($(Convert-Path (appsdir $false))))[/\\]([^/\\]+)")) {
+        $appName = $Matches[1].ToLower()
+    } elseif ((Test-Path (appsdir $true)) -and ($path -match "$([Regex]::Escape($(Convert-Path (appsdir $true))))[/\\]([^/\\]+)")) {
+        $appName = $Matches[1].ToLower()
+    } else {
+        $appName = ''
+    }
+    return $appName
+}
+
 function get_app_name_from_shim($shim) {
     if (!(Test-Path($shim))) {
         return ''

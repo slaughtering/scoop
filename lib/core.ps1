@@ -810,17 +810,6 @@ function movedir($from, $to) {
     }
 }
 
-function get_app_name($path) {
-    if ((Test-Path (appsdir $false)) -and ($path -match "$([Regex]::Escape($(Convert-Path (appsdir $false))))[/\\]([^/\\]+)")) {
-        $appName = $Matches[1].ToLower()
-    } elseif ((Test-Path (appsdir $true)) -and ($path -match "$([Regex]::Escape($(Convert-Path (appsdir $true))))[/\\]([^/\\]+)")) {
-        $appName = $Matches[1].ToLower()
-    } else {
-        $appName = ''
-    }
-    return $appName
-}
-
 function Get-DefaultArchitecture {
     $arch = get_config DEFAULT_ARCHITECTURE
     $system = if (${env:ProgramFiles(Arm)}) {
